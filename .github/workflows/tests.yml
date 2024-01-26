@@ -5,6 +5,8 @@ on: [push]
 jobs:
   test-vars:
     runs-on: ubuntu-latest
+    env:
+      MINHA_VARIAVEL: $NAME
 
     steps:
     - name: Checkout repositório
@@ -13,7 +15,7 @@ jobs:
     - name: Mostrar Variáveis e Secrets
       run: |
         echo "Variáveis de Ambiente:"
-        echo "MINHA_VARIAVEL: $NAME"
+        echo "MINHA_VARIAVEL: $MINHA_VARIAVEL"
 
         echo "Secrets:"
-        echo "MEU_SECRET: ${{ secrets.KEY }}"
+        echo "MEU_SECRET: ${{ tests }}"
