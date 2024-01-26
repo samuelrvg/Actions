@@ -1,0 +1,21 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+
+jobs:
+  test-vars:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repositório
+      uses: actions/checkout@v2
+
+    - name: Mostrar Variáveis e Secrets
+      run: |
+        echo "Variáveis de Ambiente:"
+        echo "MINHA_VARIAVEL: $MINHA_VARIAVEL"
+        echo "OUTRA_VARIAVEL: $OUTRA_VARIAVEL"
+
+        echo "Secrets:"
+        echo "MEU_SECRET: ${{ secrets.MEU_SECRET }}"
+        echo "OUTRO_SECRET: ${{ secrets.OUTRO_SECRET }}"
