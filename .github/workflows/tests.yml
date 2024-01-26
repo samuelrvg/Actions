@@ -13,9 +13,7 @@ jobs:
     - name: Mostrar Variáveis e Secrets
       run: |
         echo "Variáveis de Ambiente:"
-        echo "MINHA_VARIAVEL: $MINHA_VARIAVEL"
-        echo "OUTRA_VARIAVEL: $OUTRA_VARIAVEL"
+        echo "MINHA_VARIAVEL: $NAME"
 
         echo "Secrets:"
-        echo "MEU_SECRET: ${{ secrets.MEU_SECRET }}"
-        echo "OUTRO_SECRET: ${{ secrets.OUTRO_SECRET }}"
+        echo "MEU_SECRET: ${{ secrets.KEY }}"
