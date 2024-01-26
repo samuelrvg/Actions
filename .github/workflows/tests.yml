@@ -18,4 +18,4 @@ jobs:
         echo "MINHA_VARIAVEL: $MINHA_VARIAVEL"
 
         echo "Secrets:"
-        echo "MEU_SECRET: ${{ tests }}"
+        echo "MEU_SECRET: ${{ tests.KEY }}"
